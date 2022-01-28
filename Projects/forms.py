@@ -1,9 +1,9 @@
 from django.forms import ModelForm
-from .models import Project
+from .models import Post
 
-class CreateProjectForm(ModelForm):
+class CreatePostForm(ModelForm):
     class Meta:
-        model = Project
+        model = Post
         fields ='__all__'
-        exclude = ['host']
+        
         

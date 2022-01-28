@@ -1,4 +1,3 @@
-{% block content %}
 <!DOCTYPE html>
 
 <html lang="en">
@@ -11,13 +10,9 @@
 </head>
 
 <body>
-    <button><a href="">Upload Project</a></button> {% for project in projects %}
-    <div>
-        <h1>{{ project.title }}</h1>
+    <div class="container">
+        {% block content %} {% endblock content %}
     </div>
-    {% endfor %}
 </body>
 
 </html>
-
-{% endblock content %}
