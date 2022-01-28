@@ -13,7 +13,7 @@ class Project(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
 class Post(models.Model):
-    # user = 
+    creator =  models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     name = models.CharField(max_length=200, null=True)
     image = models.ImageField(null=True, blank=True)
     description = models.TextField(max_length= 350, null=True)

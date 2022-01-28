@@ -20,11 +20,21 @@ def createPost(request):
         form = CreatePostForm(request.POST)
         if form.is_valid:
             form.save()
-
         return redirect('home')
-        # response =  HttpResponse('Hello Django')
-    # return response
+
     context = {'form':form}
     return render(request, 'create-post.html', context)
+
+# login_required(login_url='')
+def deletePost(request, pk):
+    post = Post.objects.get(id=pk)
+    
+    if request.method == 'POST':
+        post.delete() 
+        return redirect('home')
+    
+    
+    return render (request, 'delete-post.html', {'obj':post})
+
 
 

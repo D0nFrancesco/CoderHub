@@ -14,10 +14,14 @@
 <body>
     <h1>All today's Posts:</h1>
     <button><a href="{% url 'create-post' %}">Create Post</a></button> {% for post in posts %}
+
     <div>
+        <p>{{ post.creator }}</p>
         <h1>{{ post.name }}</h1>
+        <h4>{{ post.description }}</h4>
+        <a href="{% url 'delete-post' post.id %}">Delete</a>
     </div>
-    {% endfor %}
+    <hr> {% endfor %}
 </body>
 
 
