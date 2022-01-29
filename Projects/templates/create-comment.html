@@ -10,12 +10,12 @@
 </head>
 
 <body>
-    <h1>Delete Your Post</h1>
     <form action="" method='POST'>
         {% csrf_token %}
-        <h2>Are you sure you want to delete "{{ obj }}" ?</h2>
+        <h1>Add Your Comment</h1>
+        {{form.as_p}}
         <a href="{{request.META.HTTP_REFERER}}">Cancel</a>
-        <input type="submit" value='Yes, I am sure'>
+        <input type="submit" value="Post Comment">
     </form>
 </body>
 

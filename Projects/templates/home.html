@@ -19,7 +19,28 @@
         <p>{{ post.creator }}</p>
         <h1>{{ post.name }}</h1>
         <h4>{{ post.description }}</h4>
-        <a href="{% url 'delete-post' post.id %}">Delete</a>
+        <div>
+            <div style="display: flex;">
+                <a href="{% url 'delete-post' post.id %}">Delete</a>
+
+                <a href="{% url 'update-post' post.id %}">Update</a>
+            </div>
+            <h2>Comments</h2>
+            <hr>
+            <a href="{% url 'create-comment' %}">Add a comment</a> {% if not comments %}
+            <h1>No comments yet</h1>
+            {% else %} {% for comment in comments %}
+            <hr>
+            <div>
+                <small>{{ comment.text }} - {{comment.created|timesince}} ago</small>
+                <a href="{% url 'update-comment' comment.id %}">Update</a>
+                <a href="{% url 'delete-comment' comment.id %}">Delete</a>
+            </div>
+            <hr> {% endfor %} {% endif %}
+        </div>
+
+
+
     </div>
     <hr> {% endfor %}
 </body>

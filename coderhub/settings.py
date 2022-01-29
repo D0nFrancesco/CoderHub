@@ -39,8 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Projects.apps.ProjectsConfig',
     'Accounts.apps.AccountsConfig',
-    'rest_framework'
-]
+    'rest_framework']
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
