@@ -10,7 +10,7 @@ class Project(models.Model):
     topic = models.CharField(max_length=200)
     name = models.CharField(max_length=200)
     description = models.TextField(null=True)
-    created_at = models.DateTimeField(auto_now_add=True)
+    created = models.DateTimeField(auto_now_add=True)
 
 class Post(models.Model):
     creator =  models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
@@ -29,10 +29,10 @@ class Subject(models.Model):
     topic = models.CharField(max_length=50)
     name = models.CharField(max_length=200)
     description = models.TextField(null=True)
-    created_at = models.DateTimeField(auto_now_add=True)
+    created = models.DateTimeField(auto_now_add=True)
 
 class Community(models.Model):
     topic = models.CharField(max_length=50)
     name = models.CharField(max_length=20)
     desciption = models.TextField(max_length=100, null=True)
-    created_at = models.DateTimeField(auto_now_add=True)
+    created = models.DateTimeField(auto_now_add=True)
