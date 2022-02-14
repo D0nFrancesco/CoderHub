@@ -1,0 +1,23 @@
+{
+  "name": "coderhub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/D0nFrancesco/CoderHub.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/D0nFrancesco/CoderHub/issues"
+  },
+  "homepage": "https://github.com/D0nFrancesco/CoderHub#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}

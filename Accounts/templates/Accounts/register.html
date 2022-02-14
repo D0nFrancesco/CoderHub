@@ -1,9 +1,0 @@
-{% block content %}
-    <h1>register:</h1>
-    <form action="{% url 'register_user' %}" method=POST>
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Submit" class="btn btn-secondary">
-    </form>
-
-{% endblock %}
