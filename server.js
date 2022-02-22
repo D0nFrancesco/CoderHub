@@ -1,11 +1,18 @@
-const express = require('express'); //Line 1
-const app = express(); //Line 2
-const port = process.env.PORT || 5000; //Line 3
+const express = require('express'); 
+const dotenv = require('dotenv').config();
+const connectDB  = require('./backend/config/db');
+const { errorHandler } = require('./backend/middleware/errorMiddleware');
+const port = process.env.PORT || 8000; 
 
-// This displays message that the server running and listening to specified port
-app.listen(port, () => console.log(`Listening on http://localhost:${port}/express_backend`)); //Line 6
+connectDB();
+const app = express(); 
 
-// create a GET route
-app.get('/express_backend', (req, res) => { //Line 9
-  res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' }); //Line 10
-});
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
+app.use('/api/users', require('./backend/routes/userRoutes'));
+app.use('/api/posts', require('./backend/routes/postRoutes'));
+
+app.use(errorHandler);
+
+app.listen(port, () => console.log(`Listening on http://localhost:${port}/`));
