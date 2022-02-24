@@ -1,22 +1,17 @@
 const jwt = require('jsonwebtoken');
 const User = require('../models/userModel');
 
-const protect = async(req, res) => {
+const protect = async(req, res, next) => {
   try {
-    if (req.header.authorization && req.headers.authorization.startswith('Bearer')) {
-      let token = req.headers.authorization.split(' ')[1];
-      const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const token = req.headers.authorization.split(' ')[1];
+    const decodedToken = jwt.verify(token, process.env.JWT_SECRET);
+    // const userID = decodedToken.id;
 
-      req.user = await User.findById(decoded.id).select('-password');
-      next();
-    }
-    else {
-      res.status(401).json({message: 'unauthorized'});
-      return res.end();
-    }
+    req.user = await User.findById(decodedToken.id).select('-password');
+    next();
   }
-  catch (err) {
-    res.status(500).write(err);
+  catch {
+    res.status(500).json({message: 'bad request'});
     return res.end();
   }
 }
