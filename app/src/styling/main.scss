@@ -1,16 +1,11 @@
 @charset 'UTF-8';
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
 // configuration and helpers
 @import "abstracts/variables";
 @import "responsive/breakpoints";
-
 // Base stuff
 @import "base/base";
 @import "base/helpers";
-
 // Layout related sections
-
 // pages
-
-// responsive
+@import "pages/landing" // responsive

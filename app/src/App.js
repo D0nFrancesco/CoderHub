@@ -1,8 +1,18 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Routes, Route, } from "react-router-dom";
+
 
 // styling
 import './styling/main.scss';
+
+// pages
+
+import LandingPage from './pages/landing';
+import RegisterPage from './pages/register';
+import LoginPage from './pages/login';
+import Chat from './pages/chat';
+import HomePage from './pages/home';
+import UserProfilePage from './pages/userProfilePage';
 
 class App extends Component {
 state = {
@@ -27,15 +37,34 @@ state = {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">{this.state.data}</p>
-      </div>
+      <BrowserRouter>
+            
+              <div className="container">
+
+                <Routes>
+
+                  <Route  path="/" element={<LandingPage />} />
+                  <Route  path="/home" element={<HomePage />} />
+                  
+                  <Route  path="/register" element={<RegisterPage />} />
+                  <Route  path="/login" element={<LoginPage />} />                  
+                  
+                  <Route  path="/chat" element={<Chat />} />
+
+                  <Route  path="/user-profile" element={<UserProfilePage />} />
+                  
+                </Routes>
+
+              </div>
+      </BrowserRouter>
+        
+        
+            
     );
   }
 }
+
+
+
 
 export default App;
