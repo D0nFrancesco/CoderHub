@@ -1,0 +1,24 @@
+.landing-page {
+    @include media(">=tablet") {
+        // styling for tablet size screens and bigger
+        justify-content: flex-end !important;
+    }
+}
+
+.landing-page {
+    @include media(">=laptop") {
+        // styling for laptop size screens and bigger 
+
+        .svg-img {
+            img {
+                max-width: 600px !important;
+            }
+        }
+    }
+}
+
+.landing-page {
+    @include media(">=largeScreens") {
+        // styling for larger screens sizes or bigger
+    }
+}
