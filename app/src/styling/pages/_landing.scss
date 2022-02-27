@@ -21,16 +21,18 @@
         }
 
         .logo {
-            font-size: 24px;
+            font-size: 15px;
             font-family: $second-font !important;
+            font-weight:400;
         }
 
         h1 {
-            font-size: 48px;
+            font-size: 32px !important;
+            font-weight:800;
         }
 
         p {
-            font-size: 15px;
+            font-size: 12px;
             line-height: 20px;
             color: $secondary-variant;
         }
@@ -59,11 +61,13 @@
             .start-link {
                 background: $accent3;
                 color: $background;
+                font-size:13px;
             }
 
             .explore-link {
                 color: $accent3;
                 border: solid 2px $accent3;
+                font-size:13px;
             }
         }
     }
@@ -75,9 +79,9 @@
 
         img {
             mix-blend-mode: darken;
-            width: 60%;
-            max-width: 800px;
-            min-width: 320px;
+            width: 80% !important;
+            max-width: 800px !important;
+            min-width: 320px !important;
         }
     }
 }

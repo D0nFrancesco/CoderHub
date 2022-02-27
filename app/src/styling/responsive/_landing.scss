@@ -2,7 +2,28 @@
     @include media(">=tablet") {
         // styling for tablet size screens and bigger
         justify-content: flex-end !important;
-    }
+
+        .logo{
+            font-size:22px !important;
+        }
+
+        h1{
+            font-size:33px !important;
+        }
+
+        p{
+            font-size:14px !important;
+        }
+
+        .start-link{
+            font-size:15px !important;
+        }
+
+        .explore-link{
+            font-size:15px !important;
+        }
+
+}
 }
 
 .landing-page {
@@ -14,11 +35,32 @@
                 max-width: 600px !important;
             }
         }
-    }
+
+        h1{
+            font-size:45px;
+        }
+
+        
+}
 }
 
 .landing-page {
     @include media(">=largeScreens") {
         // styling for larger screens sizes or bigger
-    }
+}
+
+        h1{
+            font-size:52px !important;
+        }
+
+        .start-link{
+            font-size:17px !important;
+        }
+
+        .explore-link{
+            font-size:16px !important;
+        }
+        p{
+            font-size:16px !important;
+        }
 }
