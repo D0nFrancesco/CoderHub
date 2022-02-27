@@ -22,12 +22,12 @@
 
         .logo {
             font-size: 15px;
-            font-family: $second-font !important;
+            font-family: $second-font;
             font-weight:400;
         }
 
         h1 {
-            font-size: 32px !important;
+            font-size: 32px;
             font-weight:800;
         }
 
@@ -52,6 +52,7 @@
                 border-radius: 40px;
                 margin: 25px;
                 transition: all 0.6s;
+                font-size: 14px;
             } 
 
             a:hover {
@@ -61,13 +62,11 @@
             .start-link {
                 background: $accent3;
                 color: $background;
-                font-size:13px;
             }
 
             .explore-link {
                 color: $accent3;
                 border: solid 2px $accent3;
-                font-size:13px;
             }
         }
     }
@@ -79,9 +78,9 @@
 
         img {
             mix-blend-mode: darken;
-            width: 80% !important;
-            max-width: 800px !important;
-            min-width: 320px !important;
+            width: 80%;
+            max-width: 800px;
+            min-width: 320px;
         }
     }
 }

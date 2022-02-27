@@ -3,6 +3,7 @@ $breakpoints: (
   "tablet": 768px,
   "laptop": 1024px,
   "largeScreens": 1300px,
+  "2k": 2000px,
 ) !default;
 
 ///
@@ -26,6 +27,8 @@ $media-expressions: (
     "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)",
   "retina3x":
     "(-webkit-min-device-pixel-ratio: 3), (min-resolution: 350dpi), (min-resolution: 3dppx)",
+  "bigScreensHeight": "(min-height: 800px)",
+  "largerScreensHeight": "(min-height: 1024px",
 ) !default;
 
 ///

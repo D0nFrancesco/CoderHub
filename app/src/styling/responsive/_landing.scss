@@ -1,66 +1,135 @@
 .landing-page {
-    @include media(">=tablet") {
-        // styling for tablet size screens and bigger
+    @include media(">=tablet", "<laptop") {
+        .logo {
+            font-size: 24px !important;
+        }
+
+        h1 {
+            font-size: 42px !important;
+        }
+
+        p {
+            font-size: 14px !important;
+        }
+
+        a {
+            font-size: 16px !important;
+        }
+    }
+
+    @include media(">=tablet", "<laptop", "landscape") {
         justify-content: flex-end !important;
+    }
 
-        .logo{
-            font-size:22px !important;
+    @include media(">=tablet", "<laptop", "portrait") {
+        a {
+            width: 160px !important;
+            height: 48px !important;
         }
-
-        h1{
-            font-size:33px !important;
-        }
-
-        p{
-            font-size:14px !important;
-        }
-
-        .start-link{
-            font-size:15px !important;
-        }
-
-        .explore-link{
-            font-size:15px !important;
-        }
-
-}
+    }
 }
 
 .landing-page {
-    @include media(">=laptop") {
-        // styling for laptop size screens and bigger 
+    @include media(">=laptop", "<1280px") {
+        justify-content: flex-end !important;
+
+        .logo {
+            font-size: 22px !important;
+        }
 
         .svg-img {
             img {
-                max-width: 600px !important;
+                max-width: 600px;
             }
         }
+    }
 
-        h1{
-            font-size:45px;
+    @include media(">=1280px") {
+        justify-content: flex-end !important;
+        
+        .logo {
+            font-size: 26px !important;
         }
 
-        
-}
+        h1 {
+            font-size: 44px !important;
+        }
+
+        p {
+            font-size: 14px !important;
+        }
+
+        .svg-img {
+            img {
+                max-width: 680px;
+            }
+        }
+    }
+
+    @include media(">=1280px", "bigScreensHeight") {
+        h1 {
+            font-size: 54px !important;
+        }
+
+        a {
+            width: 160px !important;
+            height: 48px !important;
+            font-size: 16px !important;
+        }
+
+        .svg-img {
+            img {
+                max-width: 820px;
+            }
+        }
+    }
 }
 
 .landing-page {
-    @include media(">=largeScreens") {
+    @include media(">=largeScreens", "bigScreensHeight") {
         // styling for larger screens sizes or bigger
-}
-
-        h1{
-            font-size:52px !important;
+        .logo {
+            font-size: 30px !important;
         }
 
-        .start-link{
-            font-size:17px !important;
+        h1 {
+            font-size: 66px !important;
         }
 
-        .explore-link{
-            font-size:16px !important;
+        p {
+            font-size: 18px !important;
         }
-        p{
-            font-size:16px !important;
+
+        .svg-img {
+            img {
+                max-width: 900px;
+            }
         }
+    }
+
+    @include media(">=2k") {
+        .logo {
+            font-size: 42px !important;
+        }
+
+        h1 {
+            font-size: 82px !important;
+        }
+
+        p {
+            font-size: 22px !important;
+        }
+
+        a {
+            width: 220px !important;
+            height: 55px !important;
+            font-size: 22px !important;
+        }
+
+        .svg-img {
+            img {
+                max-width: 1200px;
+            }
+        }
+    }
 }
