@@ -3,7 +3,7 @@
 $primary: #FFC83A !default;
 $primary-variant: #FFDA7C;
 $secondary: #282828;
-$secondary-variant: #707070;
+$secondary-variant: #262626;
 $error: #B00020;
 $high-emphasis: #000000;
 $mid-emphasis: #00000099;
@@ -18,4 +18,5 @@ $accent3: #6A4C93;
 $accent3-variant: #AF7EFF;
 
 /// @type List
-$font: 'Roboto', sans-serif;;
+$primary-font: 'Roboto', sans-serif;
+$second-font: 'Ropa Sans', sans-serif;
