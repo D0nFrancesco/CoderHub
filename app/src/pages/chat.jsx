@@ -4,7 +4,7 @@ const Chat = () => {
     return (
         <div className="chatPage">
             <section className="messages">
-                <h1>Contacts</h1>
+                <h1>Contacts</h1>   
             </section>
             <main className="chats"></main>
             <section className="options"></section>

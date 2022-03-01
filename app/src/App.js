@@ -16,7 +16,7 @@ class App extends Component {
           <Routers />
           {/* private routes will be implemented later */}
         </Fragment>
-      </BrowserRouter>    
+      </BrowserRouter>
     );
   }
 }

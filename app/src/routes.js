@@ -10,7 +10,7 @@ const Routers = () => {
         {path: "/", element: <LandingPage />},
         {path: "/register", element: <Register />},
         {path: "/login", element: <Login />}
-    ])
+    ]);
 
     return elements;
 }
