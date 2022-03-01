@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-const checkbox = () => {
+const checkbox = (props) => {
     const [isChecked, setIsChecked] = useState(false);
 
     return (
         <label className="terms">
-            <input type="checkbox" name="checkbox" id="checkbox" onChange={() => {
+            <input type="checkbox" required name="checkbox" id="checkbox" onChange={() => {
                 setIsChecked(!isChecked);
                 }}
             />
@@ -19,7 +19,7 @@ const checkbox = () => {
                     fill={isChecked ? "#6A4C93" : "#000"}
                 />
             </svg>
-            <p>I've read and agree with Terms of Service and our Privacy Policy</p>
+            <p>{props.text}</p>
         </label>
     )
 }

@@ -2,12 +2,13 @@ import React  from "react";
 import { Link } from "react-router-dom";
 
 import Checkbox from "../components/checkbox";
+import bg from "../img/bgAuth.png";
 
 const RegisterPage = () => {
   return (
       <div className="registerPage">
         <div className="img">
-          <img src="" alt="" />
+          <div className="logo">CoderHub</div>
         </div>
         <div className="form">
           <form action="" method="post">
@@ -18,7 +19,7 @@ const RegisterPage = () => {
             <input type="email" required className="email" id="email" name="email"/>
             <label htmlFor="password">Password</label>
             <input type="password" name="password" required id="password" className="password" />
-            <Checkbox />
+            <Checkbox text="I've read and agree with Terms of Service and our Privacy Policy."/>
             <input type="submit" value="Register" id="submit"/>
           </form>
           <p>Already have an account? <Link to='/login'>Sing in</Link></p>
