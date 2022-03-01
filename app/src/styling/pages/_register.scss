@@ -1,0 +1,72 @@
+.registerPage {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+
+    .img {
+        display: none;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 325px;
+
+        h1 {
+            font-size: 28px;
+            line-height: 62px;
+        }
+
+        label {
+            color: $secondary;
+            margin: 6px 0;
+        }
+
+        input {
+            background: $surface;
+            border-radius: 16px;
+            height: 34px;
+            border: 1px solid $surface;
+        }
+
+        .terms {
+            display: grid;
+            grid-template-columns: 10% 90%;
+            align-items: center;
+            margin: 18px 0 10px 0;
+            cursor: pointer;
+
+            input {
+                clip: rect(0 0 0 0);
+                clip-path: inset(50%);
+                height: 1px;
+                overflow: hidden;
+                position: absolute;
+                white-space: nowrap;
+                width: 1px;
+            }
+
+            svg {
+                width: 30px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+
+        #submit {
+            font-size: 16px;
+            font-weight: 500;
+            max-width: 135px;
+            height: 40px;
+            background: $accent3;
+            color: $background;
+            margin: 10px 0 18px 0;
+        }
+    }
+}

@@ -1,0 +1,81 @@
+.registerPage {
+    @include media(">phone", "bigScreensHeight") {
+
+        form {
+            h1 {
+                font-size: 30px !important;
+            }
+    
+            label {
+                font-size: 18px;
+            }
+    
+            input {
+                height: 42px !important;
+            }
+    
+            #submit {
+                font-size: 18px !important;
+                max-width: 150px !important;
+                height: 46px !important;
+            }
+    
+            .terms {
+                grid-template-columns: 16% 84% !important;
+    
+                svg {
+                    width: 40px !important;
+                }
+    
+                p {
+                    font-size: 16px !important;
+                }
+            }
+        }
+
+        p {
+            font-size: 20px !important;
+        }
+    }
+
+    @include media(">=tablet") {
+        grid-template-columns: 30% 50% 20%;
+        padding: 0%;
+
+        .img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background-position: right;
+            position: relative;
+            background-color: $primary-variant;
+
+            .logo {
+                font-weight: bolder;
+                font-size: 24px;
+            }
+        }
+        .img::before {
+            content: '';
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            opacity: 0.2;
+            background-position: right;
+            background-size: cover;
+            mix-blend-mode: multiply;
+            background-image: url("../../img/bgAuth.png");
+        }
+
+        .form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+}

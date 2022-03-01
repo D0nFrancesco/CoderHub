@@ -1,7 +1,7 @@
 // styling
 import './styling/main.scss';
 
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { BrowserRouter, Routes, Route, } from "react-router-dom";
 
 // pages
@@ -16,7 +16,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="container">
+        <Fragment>
           {/* we are gonna change this routing later */}
           <Routes>
             <Route  path="/" element={<LandingPage />} />
@@ -26,7 +26,7 @@ class App extends Component {
             <Route  path="chat" element={<Chat />} />
             <Route  path="user-profile" element={<UserProfilePage />} />
           </Routes>
-        </div>
+        </Fragment>
       </BrowserRouter>    
     );
   }
