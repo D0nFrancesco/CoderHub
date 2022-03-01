@@ -3,11 +3,15 @@
     padding:0;
     box-sizing: border-box;
 }
-
-h1, h1, p, a {
+    
+h1, h2, h3, p, a, input {
     font-family: $primary-font;
 }
 
 a {
     text-decoration: none;
+}
+
+label {
+    font-family: $third-font;
 }
