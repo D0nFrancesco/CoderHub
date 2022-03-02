@@ -1,13 +1,16 @@
 // styling
 import './styling/main.scss';
 
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment, Suspense } from 'react';
 import { BrowserRouter} from "react-router-dom";
 import { Provider as AlertProvider } from 'react-alert';
 import AlertTemplate from 'react-alert-template-basic';
 
 // routes
 import Routers from './routes';
+
+// components
+import Spinner from 'react-bootstrap/Spinner';
 
 const alertOptions = {
   timeout: 3000,
@@ -21,9 +24,19 @@ class App extends Component {
       <AlertProvider template={AlertTemplate} {...alertOptions}>
         <BrowserRouter>
           <Fragment>
-            {/* public routes */}
-            <Routers />
-            {/* private routes will be implemented later */}
+            <Suspense 
+              fallback={
+                <div className='loader'>
+                  <Spinner animation="border" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                  </Spinner>
+                </div>
+              }
+            >
+              {/* public routes */}
+              <Routers />
+              {/* private routes will be implemented later */}
+            </Suspense>
           </Fragment>
         </BrowserRouter>
       </AlertProvider>

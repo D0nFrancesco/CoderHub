@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import Checkbox from "../components/checkbox";
 import { register, reset } from "../reducers/auth";
@@ -29,8 +29,14 @@ const RegisterPage = () => {
       alert.show(message);
     }
 
-    if (isSuccess || user) {
-      alert.show(message);
+    if (isSuccess) {
+      // console.log(message);
+      alert.show("user created succesfully");
+      navigate('/');
+    }
+
+    if(user) {
+      alert.show("You are logged in 😸");
       navigate('/');
     }
 
