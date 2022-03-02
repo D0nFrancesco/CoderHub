@@ -8,7 +8,7 @@ const registerUser = async(req, res) => {
 
     if (!name || !email || !password) {
       res.status(400);
-      res.write('bad request :(');
+      res.json({message: 'bad request :('});
       return res.end();
     }
 
@@ -16,7 +16,7 @@ const registerUser = async(req, res) => {
 
     if (userExists) {
       res.status(400);
-      res.write('user already exists');
+      res.json({message: 'user already exists'});
       return res.end();
     }
 

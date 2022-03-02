@@ -3,10 +3,13 @@ import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { Link } from "react-router-dom";
 import Checkbox from "../components/checkbox";
-import { createMessage } from "../actions/errorHandler";
 import { register, reset } from "../reducers/auth";
 
+import { useAlert } from 'react-alert';
+
 const RegisterPage = () => {
+  const alert = useAlert();
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -23,10 +26,11 @@ const RegisterPage = () => {
 
   useEffect(() => {
     if (isError) {
-      createMessage({ error: message});
+      alert.show(message);
     }
 
     if (isSuccess || user) {
+      alert.show(message);
       navigate('/');
     }
 
