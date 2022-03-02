@@ -25,9 +25,7 @@ const RegisterPage = () => {
   );
 
   useEffect(() => {
-    if (isError) {
-      alert.show(message);
-    }
+    if (isError) alert.show(message);
 
     if (isSuccess) {
       // console.log(message);
@@ -39,7 +37,6 @@ const RegisterPage = () => {
       alert.show("You are logged in 😸");
       navigate('/');
     }
-
     dispatch(reset())
   }, [user, isError, isSuccess, message, navigate, dispatch]);
 
@@ -98,7 +95,9 @@ const RegisterPage = () => {
               onChange={onChange}
               value={password}
             />
-            <Checkbox text="I've read and agree with Terms of Service and our Privacy Policy."/>
+            <Checkbox
+              text="I've read and agree with Terms of Service and our Privacy Policy."
+            />
             <input type="submit" value="Register" id="submit"/>
           </form>
           <p>Already have an account? <Link to='/login'>Sing in</Link></p>
