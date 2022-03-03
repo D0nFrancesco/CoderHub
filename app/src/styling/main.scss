@@ -12,8 +12,12 @@
 
 // pages
 @import "pages/landing";
-@import "pages/register";
+@import "pages/authPages";
 
 // responsive
 @import "responsive/landing";
 @import "responsive/register";
+@import "responsive/login";
+
+// bootstraps components styling
+@import "~bootstrap/scss/bootstrap";

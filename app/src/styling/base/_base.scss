@@ -3,13 +3,17 @@
     padding:0;
     box-sizing: border-box;
 }
+
+h1, h2, h3, p {
+    margin: 0% !important;
+}
     
-h1, h2, h3, p, a, input {
+h1, h2, h3, p, a, input, span {
     font-family: $primary-font;
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 label {
@@ -18,4 +22,12 @@ label {
 
 .logo {
     font-family: $second-font !important;
+}
+
+.loader {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
