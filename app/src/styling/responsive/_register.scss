@@ -1,4 +1,4 @@
-.registerPage {
+.registerPage, .loginPage {
     @include media(">phone", "bigScreensHeight") {
 
         form {
@@ -39,7 +39,7 @@
     }
 
     @include media(">=tablet") {
-        grid-template-columns: 30% 50% 20%;
+        grid-template-columns: 25% 50% 25%;
         padding: 0%;
 
         .img {
